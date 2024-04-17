@@ -19,11 +19,18 @@
 		#navbar {
 			height:50px;
 		}
+		
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Optional: Centers the image */
+        }
 
 		.logo {
-		  font-size: 1.5em;
-		  font-weight: bold;
-		  min-width:120px;
+			font-size: 1.5em;
+			font-weight: bold;
+			min-width:100px;
 		}
 		
 		#logo {
@@ -137,8 +144,6 @@
             justify-content: space-between;
             flex-wrap: wrap;
             margin-bottom: 20px;
-			margin-left:100px;
-			margin-right:100px;
 			font-size:20px;
         }
 
@@ -178,6 +183,7 @@
             max-width: 300px;
             margin: 0 auto;
             box-sizing: border-box;
+			
         }
 
         .column img {
@@ -287,6 +293,10 @@
 		}
 
 		@media (max-width: 768px) {
+			.column {
+				margin-bottom:100px;
+			}
+		
 			.footer-links {
 				flex-direction: column;
 				text-align: center;
@@ -323,7 +333,7 @@
 
 		<section class="image-section">
 			<div class="container">
-				<img id="logo" class="logo" src="./imgs/starnogenlogo.png" alt="logo"> 
+				<img id="logo" class="logo responsive-image" src="./imgs/starnogenlogo.png" alt="logo"> 
 				<h2 class="section-title">Our Studio</h2>
 				
 				<div class="two-column-section-webpage">
