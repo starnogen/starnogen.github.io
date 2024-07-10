@@ -38,7 +38,7 @@
 			max-width:500px;
 		}
 		
-		h1, h2, h3 {
+		h1, h2, h3, h4 {
 			color:#fff;
 		}
 		
@@ -48,12 +48,17 @@
 		}
 		
 		h2 {
-			font-family:roboto;
+			font-family:abel;
 			font-size:30px;
 			opacity:0.7;
 		}
 		
 		h3 {
+			font-family:abel;
+			font-size:50px;
+		}
+		
+		h4 {
 			font-family:abel;
 			font-size:30px;
 		}
@@ -174,7 +179,7 @@
             text-align: left;
         }
 		
-		.three-column-section h3 {
+		.three-column-section h4 {
 			text-align: center;
 		}
 
@@ -192,7 +197,7 @@
             margin-bottom: 15px;
         }
 
-        .column h3 {
+        .column h4 {
             margin-bottom: 10px;
         }
 
@@ -312,6 +317,40 @@
 				margin-bottom: 20px;
 			}
 		}
+		
+		/* Style the popup */
+		.popup {
+			display: none; /* Initially hide the popup */
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+			z-index: 999;
+		}
+
+		/* Base style for the popup content */
+		.popup-content {
+			position: absolute;
+			background-color: #221f1f;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+			overflow: hidden;
+		}
+
+		/* Style the YouTube video iframe */
+		#youtubeVideo {
+			width: 100%; /* Full width of the popup content */
+			height: 100%; /* Full height of the popup content */
+		}
+
+		/* Video styling */
+		#localVideo {
+			width: 100%; /* Full width of popup content */
+			height: 100%; /* Full height of popup content */
+		}
     </style>
 </head>
 <body>
@@ -329,7 +368,7 @@
     <div class="main-content">
 	    <section class="single-column-section-webpage">
 			<div class="container">
-				<h3>Starnogen Music</h3>
+				<h2>Starnogen Music</h2>
 				<p>Discover the synergy of music at Starnogen Music. We're a creative nexus where songwriters and artists unite to forge something truly extraordinary. With a commitment to innovation, we transcend genres and boundaries to produce music that captivates the senses and stirs the mind and heart. At Starnogen, every collaboration is a journey of exploration, resulting in tracks that are as distinctive as they are unforgettable. Join us in our quest to redefine the art of sound at Starnogen Music.</p>
 			</div>
         </section>
@@ -355,18 +394,221 @@
 		
 
 		<section id="building-places">
+			
+			<!--h3>January</h3-->
+			
 			<div class="container three-column-section">
 				<div class="column">
-					<a href="https://www.youtube.com/watch?v=w5x7VdCRkcc"><img src="./imgs/RubyWise.png" alt="Ruby Wise - Can't You Stay With Me"></a>
-					<a href="https://www.youtube.com/watch?v=w5x7VdCRkcc"><h3>Ruby Wise</h3></a>
+					<img src="./imgs/velvet.png" alt="Plastic Pretender - Velvet Haze" class="trigger" data-video-src="https://www.youtube.com/watch?v=iXu86rT-Alk" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="https://www.youtube.com/watch?v=iXu86rT-Alk" style="cursor: pointer;">Velvet Haze</h4>
+					<p>Velvet Haze is a powerhouse in the punk rock scene, known for her raw, unapologetic sound and fierce dedication to social activism. Born and raised in the gritty streets of downtown Los Angeles, Velvet's music is a reflection of her rebellious spirit and desire to challenge the status quo. Her lyrics often tackle issues like inequality, political corruption, and environmental degradation, resonating deeply with a generation hungry for change. Velvet's onstage presence is electric, her voice a rallying cry for those who feel voiceless. With a signature look that combines vintage punk fashion with her own edgy twist, she is as much a visual icon as she is a musical one.</p>
+
+					<p>Beyond her music, Velvet is deeply committed to activism, using her platform to raise awareness and mobilize her fans. She regularly organizes benefit concerts, participates in protests, and collaborates with grassroots organizations to effect real change. Her social commentaries, often delivered through both her songs and public speeches, are sharp, insightful, and unflinchingly honest. Velvet's dedication to fighting the status quo has earned her a loyal following and respect from fellow activists and artists alike. Despite the challenges, she remains undeterred, continuously pushing boundaries and inspiring others to join her in the fight for a better world.</p>
+				</div>
+				
+				<div class="column">
+					<img src="./imgs/slade.png" alt="Whisper of the Heart - Slade Rebel" class="trigger" data-video-src="https://www.youtube.com/watch?v=rU6Nl2k-Ti0" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="https://www.youtube.com/watch?v=rU6Nl2k-Ti0" style="cursor: pointer;">Slade Rebel</h4>
+					<p>Slade Rebel is a charismatic punk rock artist whose high-energy performances and rebellious spirit have earned him a place among the legends of the genre. Hailing from the streets of London, Slade's music channels the raw power and edgy flair. His signature style combines snarling vocals, driving guitar riffs, and a theatrical stage presence that captivates audiences. Known for his platinum blonde hair and leather-clad outfits, Slade embodies the quintessential punk rock image, blending attitude and style with an unrelenting drive to push musical boundaries.</p>
+
+					<p>Offstage, Slade is just as dynamic, often found engaging with fans and speaking out on issues close to his heart. A staunch advocate for artistic freedom and individuality, he uses his platform to promote self-expression and defy societal norms. His lyrics frequently explore themes of rebellion, love, and the struggles of the modern age, resonating with a diverse fanbase. Slade Rebel's influence extends beyond music, as he continues to inspire a new generation of punk enthusiasts with his bold, uncompromising approach to life and art.</p>
+				</div>
+				
+				<div class="column">
+					<img src="./imgs/amy.jpg" alt="Wild Brigade - Amy Wilder" class="trigger" data-video-src="https://www.youtube.com/watch?v=ruy3lcTmQls" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="https://www.youtube.com/watch?v=ruy3lcTmQls" style="cursor: pointer;">Amy Wilder</h4>
+					<p>Amy Wilder is a powerhouse in the power punk scene, known for her electrifying performances and fierce, unapologetic sound. Hailing from the vibrant music scene of Seattle, Amy's music is a high-octane blend of punk rock energy and catchy, anthemic melodies. Her powerful voice and commanding stage presence captivate audiences, making every performance a raw and exhilarating experience. Amy's unique style, characterized by her bold fashion choices and brightly colored hair, sets her apart as a visual and musical icon in the punk world.</p>
+
+					<p>Amy Wilder is not only a dynamic force onstage but also a passionate advocate for animal welfare.  Her lyrics often tackle themes of rebellion, self-discovery, and the fight against societal norms, resonating with fans who share her passion for change. Amy regularly engages with her community, organizing benefit concerts and speaking out on issues such as animal rights and environmental conservation. Her dedication to making a positive impact through her music and activism has earned her a loyal and diverse fanbase, solidifying her status as a trailblazer in the power punk genre.</p>
+				</div>
+			</div>
+			
+			<!--h3>February</h3>
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/Thruster's Embrace - Luna Nova.png" alt="Thruster's Embrace - Luna Nova" class="trigger" data-video-src="./videos/Thruster's Embrace - Luna Nova.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Thruster's Embrace - Luna Nova.mp4" style="cursor: pointer;">Luna Nova</h4>
+					<p>Maelion Elenari is an elven artist known for their captivating musical creations that transport listeners to the enchanting realm of the elven world. Born with a deep connection to nature and the mystical forces that surround them, Maelion's music reflects a serene and otherworldly quality. Their use of ethereal vocals, traditional elven instruments, and lush orchestral arrangements creates a soundscape that evokes the beauty and magic of an ancient, timeless world. Drawing inspiration from the stars, woods, and the natural elements, Maelion's compositions blend storytelling with poetic lyricism to craft immersive and dreamlike experiences.</p>
+
+					<p>Maelion's artistry is rooted in the traditions of their elven heritage, yet they bring a fresh and contemporary perspective to the genre of Ethereal Elven Folk. Their songs often explore themes of dreams, nature, and the mystical journey of the elven spirit. With a soothing yet powerful voice, Maelion leads audiences on a journey through shimmering soundscapes and haunting melodies. As they continue to create music that resonates with fans around the world, Maelion Elenari is truly a unique voice in the realm of fantasy music, enchanting listeners with their ethereal sound and captivating performances.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/Cassette Nostalgia - Time Machine.png" alt="Cassette Nostalgia - Time Machine" class="trigger" data-video-src="./videos/(intro) Cassette Nostalgia - Time Machine.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./imvideosgs/(intro) Cassette Nostalgia - Time Machine.mp4" style="cursor: pointer;">Time Machine</h4>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/Stardust Escape - Kyperion.jpg" alt="Stardust Escape - Kyperion" class="trigger" data-video-src="./videos/Stardust Escape - Kyperion.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Stardust Escape - Kyperion.mp4" style="cursor: pointer;">Kyperion</h4>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+			</div-->
+			
+			<!--h3>March</h3>
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/Beacon of Light - Thunderchrome.png" alt="Beacon of Light - Thunderchrome" class="trigger" data-video-src="./videos/Beacon of Light - Thunderchrome.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Beacon of Light - Thunderchrome.mp4" style="cursor: pointer;">Thunderchrome</h4>
 					<p>Ruby Wise, a captivating singer-songwriter renowned for weaving enchanting melodies and heartfelt lyrics into mesmerizing compositions. Born with an innate talent for storytelling through music, Ruby Wise has carved out a unique space in the industry with her emotive voice and evocative songwriting.</p>
 
 					<p>From an early age, Ruby Wise displayed a passion for music, drawing inspiration from a diverse range of genres spanning from soulful ballads to folk-infused tunes. Influenced by luminaries such as Joni Mitchell, Sam Cooke, and Norah Jones, she honed her craft, crafting songs that resonate deeply with listeners on a personal level.</p>
 				</div>
 
 				<div class="column">
-					<a href="https://www.youtube.com/watch?v=G0Ljlbolmmw"><img src="./imgs/WhiteTemple.png" alt="White Temple - Whispers and Steel"></a>
-					<a href="https://www.youtube.com/watch?v=G0Ljlbolmmw"><h3>White Temple</h3></a>
+					<img src="./imgs/WhiteTemple.png" alt="White Temple - Whispers and Steel" class="trigger" data-video-src="https://www.youtube.com/watch?v=G0Ljlbolmmw" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="https://www.youtube.com/watch?v=G0Ljlbolmmw" style="cursor: pointer;">White Temple</h4>
+					<p>White Temple's electrifying music is shaking both the stage and the gaming table. Born from the fiery depths of heavy metal and fueled by the passion of tabletop gaming, these modern-day bards are rewriting the rules of rock 'n roll.</p>
+
+					<p>Imagine a dimly lit room filled with the clatter of dice and the sound of shredding guitars. That's the world of White Temple. By day, they're crafting their epic music and by night, they're battling mythical beasts around the gaming table.</p>
+
+					<p>Their music is a heady concoction of thundering riffs, pounding rhythms, and lyrics that speak to the heart of every gamer. From the depths of dungeons to the heights of castles, their songs paint vivid landscapes where heroes rise, villains fall, and epic quests unfold.</p>
+				</div>
+
+				<!--div class="column">
+					<img src="./imgs/rebelbase.png" alt="Rebel Base - Rock's Throne" class="trigger" data-video-src="./videos/Rebel Base - Rock's Throne.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Rebel Base - Rock's Throne.mp4" style="cursor: pointer;">Rock's Throne</h4>
+					<p>Nathan embodies the soulful essence of contemporary music with his captivating vocals and heartfelt lyrics. Hailing from a small town with big dreams, Nathan discovered his passion for music at a young age, finding solace and expression through melodies and harmonies.</p>
+
+					<p>Drawing inspiration from his own life experiences and the world around him, Nathan weaves intricate tales of love and resilience into his music, resonating deeply with listeners of all ages. His emotive performances, marked by his velvety voice and genuine sincerity, have garnered him a loyal following. With each song, Nathan invites his audience on a journey of self-discovery and introspection, inviting them to feel deeply and connect with the universal emotions that define the human experience.</p>
+				</div>
+			</div>
+			
+			<h3>May</h3>
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<a href="https://www.youtube.com/watch?v=w5x7VdCRkcc"><img src="./imgs/starfall.jpg" alt="Velvet Haze - Plastic Pretender"></a>
+					<a href="https://www.youtube.com/watch?v=w5x7VdCRkcc"><h4>Velvet Haze</h4></a>
+					<p>Maelion Elenari is an elven artist known for their captivating musical creations that transport listeners to the enchanting realm of the elven world. Born with a deep connection to nature and the mystical forces that surround them, Maelion's music reflects a serene and otherworldly quality. Their use of ethereal vocals, traditional elven instruments, and lush orchestral arrangements creates a soundscape that evokes the beauty and magic of an ancient, timeless world. Drawing inspiration from the stars, woods, and the natural elements, Maelion's compositions blend storytelling with poetic lyricism to craft immersive and dreamlike experiences.</p>
+
+					<p>Maelion's artistry is rooted in the traditions of their elven heritage, yet they bring a fresh and contemporary perspective to the genre of Ethereal Elven Folk. Their songs often explore themes of dreams, nature, and the mystical journey of the elven spirit. With a soothing yet powerful voice, Maelion leads audiences on a journey through shimmering soundscapes and haunting melodies. As they continue to create music that resonates with fans around the world, Maelion Elenari is truly a unique voice in the realm of fantasy music, enchanting listeners with their ethereal sound and captivating performances.</p>
+				</div>
+
+				<div class="column">
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><img src="./imgs/starfall2.jpg" alt="Naiëa Elenur (Eternal Starlight)"></a>
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><h4>Amy Wilder</h4></a>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+
+				<div class="column">
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><img src="./imgs/starfall3.jpg" alt="Kyperion - Stardust Escape"></a>
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><h4>Kyperion</h4></a>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+			</div>
+			
+			<h3>June</h3>
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/starfall - galactic hunt.png" alt="Galactic Hunt - Starfall Symphony Orchestra" class="trigger" data-video-src="./videos/Galactic Hunt - Starfall Symphony Orchestra.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Galactic Hunt - Starfall Symphony Orchestra.mp4" style="cursor: pointer;">Starfall Galactic Hunt</h4>
+					<p>Maelion Elenari is an elven artist known for their captivating musical creations that transport listeners to the enchanting realm of the elven world. Born with a deep connection to nature and the mystical forces that surround them, Maelion's music reflects a serene and otherworldly quality. Their use of ethereal vocals, traditional elven instruments, and lush orchestral arrangements creates a soundscape that evokes the beauty and magic of an ancient, timeless world. Drawing inspiration from the stars, woods, and the natural elements, Maelion's compositions blend storytelling with poetic lyricism to craft immersive and dreamlike experiences.</p>
+
+					<p>Maelion's artistry is rooted in the traditions of their elven heritage, yet they bring a fresh and contemporary perspective to the genre of Ethereal Elven Folk. Their songs often explore themes of dreams, nature, and the mystical journey of the elven spirit. With a soothing yet powerful voice, Maelion leads audiences on a journey through shimmering soundscapes and haunting melodies. As they continue to create music that resonates with fans around the world, Maelion Elenari is truly a unique voice in the realm of fantasy music, enchanting listeners with their ethereal sound and captivating performances.</p>
+				</div>
+
+				<div class="column">
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><img src="./imgs/starfall5.jpg" alt="Naiëa Elenur (Eternal Starlight)"></a>
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><h4>Amy Wilder</h4></a>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+
+				<div class="column">
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><img src="./imgs/starfall6.jpg" alt="Kyperion - Stardust Escape"></a>
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><h4>Kyperion</h4></a>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+			</div>
+			
+			<h3>July</h3>
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><img src="./imgs/starfall5.jpg" alt="Naiëa Elenur (Eternal Starlight)"></a>
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><h4>Amy Wilder</h4></a>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+				
+				<div class="column">
+					<img src="./imgs/Encounter Terra.png" alt="Encounter Terra" class="trigger" data-video-src="./videos/Encounter Terra.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Encounter Terra.mp4" style="cursor: pointer;">Encounter Terra</h4>
+					<p>Maelion Elenari is an elven artist known for their captivating musical creations that transport listeners to the enchanting realm of the elven world. Born with a deep connection to nature and the mystical forces that surround them, Maelion's music reflects a serene and otherworldly quality. Their use of ethereal vocals, traditional elven instruments, and lush orchestral arrangements creates a soundscape that evokes the beauty and magic of an ancient, timeless world. Drawing inspiration from the stars, woods, and the natural elements, Maelion's compositions blend storytelling with poetic lyricism to craft immersive and dreamlike experiences.</p>
+
+					<p>Maelion's artistry is rooted in the traditions of their elven heritage, yet they bring a fresh and contemporary perspective to the genre of Ethereal Elven Folk. Their songs often explore themes of dreams, nature, and the mystical journey of the elven spirit. With a soothing yet powerful voice, Maelion leads audiences on a journey through shimmering soundscapes and haunting melodies. As they continue to create music that resonates with fans around the world, Maelion Elenari is truly a unique voice in the realm of fantasy music, enchanting listeners with their ethereal sound and captivating performances.</p>
+				</div>
+
+				<div class="column">
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><img src="./imgs/starfall6.jpg" alt="Kyperion - Stardust Escape"></a>
+					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><h4>Kyperion</h4></a>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+			</div>
+			
+			<h3>August</h3-->
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/RubyWise.png" alt="Ruby Wise - Can't You Stay With Me" class="trigger" data-video-src="https://www.youtube.com/watch?v=RYhj2n9e0_0" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="https://www.youtube.com/watch?v=RYhj2n9e0_0" style="cursor: pointer;">Ruby Wise</h4>
+					<p>Ruby Wise, a captivating singer-songwriter renowned for weaving enchanting melodies and heartfelt lyrics into mesmerizing compositions. Born with an innate talent for storytelling through music, Ruby Wise has carved out a unique space in the industry with her emotive voice and evocative songwriting.</p>
+
+					<p>From an early age, Ruby Wise displayed a passion for music, drawing inspiration from a diverse range of genres spanning from soulful ballads to folk-infused tunes. Influenced by luminaries such as Joni Mitchell, Sam Cooke, and Norah Jones, she honed her craft, crafting songs that resonate deeply with listeners on a personal level.</p>
+				</div>
+				
+				<div class="column">
+					<img src="./imgs/WhiteTemple.png" alt="White Temple - Whispers and Steel" class="trigger" data-video-src="https://www.youtube.com/watch?v=G0Ljlbolmmw" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="https://www.youtube.com/watch?v=G0Ljlbolmmw" style="cursor: pointer;">White Temple</h4>
+					<p>White Temple's electrifying music is shaking both the stage and the gaming table. Born from the fiery depths of heavy metal and fueled by the passion of tabletop gaming, these modern-day bards are rewriting the rules of rock 'n roll.</p>
+
+					<p>Imagine a dimly lit room filled with the clatter of dice and the sound of shredding guitars. That's the world of White Temple. By day, they're crafting their epic music and by night, they're battling mythical beasts around the gaming table.</p>
+
+					<p>Their music is a heady concoction of thundering riffs, pounding rhythms, and lyrics that speak to the heart of every gamer. From the depths of dungeons to the heights of castles, their songs paint vivid landscapes where heroes rise, villains fall, and epic quests unfold.</p>
+				</div>
+				
+				<div class="column">
+					<img src="./imgs/NathanHarris.png" alt="Nathan Harris - Gossamer Wings" class="trigger" data-video-src="https://www.youtube.com/watch?v=7YjR9xr0XyE" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="https://www.youtube.com/watch?v=7YjR9xr0XyE" style="cursor: pointer;">Nathan Harris</h4>
+					<p>Nathan embodies the soulful essence of contemporary music with his captivating vocals and heartfelt lyrics. Hailing from a small town with big dreams, Nathan discovered his passion for music at a young age, finding solace and expression through melodies and harmonies.</p>
+
+					<p>Drawing inspiration from his own life experiences and the world around him, Nathan weaves intricate tales of love and resilience into his music, resonating deeply with listeners of all ages. His emotive performances, marked by his velvety voice and genuine sincerity, have garnered him a loyal following. With each song, Nathan invites his audience on a journey of self-discovery and introspection, inviting them to feel deeply and connect with the universal emotions that define the human experience.</p>
+				</div>
+			</div>
+			
+			<!--h3>October</h3>
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/Halloween Groove - The Spellbinders.png" alt="Halloween Groove - The Spellbinders" class="trigger" data-video-src="./videos/Halloween Groove - The Spellbinders.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Halloween Groove - The Spellbinders.mp4" style="cursor: pointer;">The Spellbinders</h4>
+					<p>Ruby Wise, a captivating singer-songwriter renowned for weaving enchanting melodies and heartfelt lyrics into mesmerizing compositions. Born with an innate talent for storytelling through music, Ruby Wise has carved out a unique space in the industry with her emotive voice and evocative songwriting.</p>
+
+					<p>From an early age, Ruby Wise displayed a passion for music, drawing inspiration from a diverse range of genres spanning from soulful ballads to folk-infused tunes. Influenced by luminaries such as Joni Mitchell, Sam Cooke, and Norah Jones, she honed her craft, crafting songs that resonate deeply with listeners on a personal level.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/I Adore the Yultide - Benny Trinkle2.png" alt="I Adore the Yultide - Benny Trinkle" class="trigger" data-video-src="./videos/I Adore the Yultide - Benny Trinkle.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/I Adore the Yultide - Benny Trinkle.mp4" style="cursor: pointer;">Miles and Trixie</h4>
 					<p>White Temple's electrifying music is shaking both the stage and the gaming table. Born from the fiery depths of heavy metal and fueled by the passion of tabletop gaming, these modern-day bards are rewriting the rules of rock 'n roll.</p>
 
 					<p>Imagine a dimly lit room filled with the clatter of dice and the sound of shredding guitars. That's the world of White Temple. By day, they're crafting their epic music and by night, they're battling mythical beasts around the gaming table.</p>
@@ -375,16 +617,182 @@
 				</div>
 
 				<div class="column">
-					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><img src="./imgs/NathanHarris.png" alt="Nathan Harris - Gossamer Wings"></a>
-					<a href="https://www.youtube.com/watch?v=7YjR9xr0XyE"><h3>Nathan Harris</h3></a>
+					<img src="./imgs/Wrapped in Love - Miles Bennett and Trixie Parker.png" alt="Wrapped in Love - Miles Bennett and Trixie Parker" class="trigger" data-video-src="./videos/(Intro) Wrapped in Love - Miles Bennett and Trixie Parker.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/(Intro) Wrapped in Love - Miles Bennett and Trixie Parker.mp4" style="cursor: pointer;">Miles and Trixie</h4>
 					<p>Nathan embodies the soulful essence of contemporary music with his captivating vocals and heartfelt lyrics. Hailing from a small town with big dreams, Nathan discovered his passion for music at a young age, finding solace and expression through melodies and harmonies.</p>
 
 					<p>Drawing inspiration from his own life experiences and the world around him, Nathan weaves intricate tales of love and resilience into his music, resonating deeply with listeners of all ages. His emotive performances, marked by his velvety voice and genuine sincerity, have garnered him a loyal following. With each song, Nathan invites his audience on a journey of self-discovery and introspection, inviting them to feel deeply and connect with the universal emotions that define the human experience.</p>
 				</div>
 			</div>
+			
+			<h3>November</h3>
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/lament of the eldar.png" alt="Lament of the Eldar - Lúthien Eärendilyon" class="trigger" data-video-src="./videos/Níniach Edhil (Lament of the Eldar) - Lúthien Eärendilyon.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Níniach Edhil (Lament of the Eldar) - Lúthien Eärendilyon.mp4" style="cursor: pointer;">Lament of the Eldar</h4>
+					<p>Maelion Elenari is an elven artist known for their captivating musical creations that transport listeners to the enchanting realm of the elven world. Born with a deep connection to nature and the mystical forces that surround them, Maelion's music reflects a serene and otherworldly quality. Their use of ethereal vocals, traditional elven instruments, and lush orchestral arrangements creates a soundscape that evokes the beauty and magic of an ancient, timeless world. Drawing inspiration from the stars, woods, and the natural elements, Maelion's compositions blend storytelling with poetic lyricism to craft immersive and dreamlike experiences.</p>
+
+					<p>Maelion's artistry is rooted in the traditions of their elven heritage, yet they bring a fresh and contemporary perspective to the genre of Ethereal Elven Folk. Their songs often explore themes of dreams, nature, and the mystical journey of the elven spirit. With a soothing yet powerful voice, Maelion leads audiences on a journey through shimmering soundscapes and haunting melodies. As they continue to create music that resonates with fans around the world, Maelion Elenari is truly a unique voice in the realm of fantasy music, enchanting listeners with their ethereal sound and captivating performances.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/Naiëa Elenur (Eternal Starlight).png" alt="Naiëa Elenur (Eternal Starlight)" class="trigger" data-video-src="./videos/Naiëa Elenur (Eternal Starlight) - Elarion Arandë.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Naiëa Elenur (Eternal Starlight) - Elarion Arandë.mp4" style="cursor: pointer;">Elarion Arandë</h4>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/lament of the eldar2.png" alt="Lament of the Eldar - Lúthien Eärendilyon" class="trigger" data-video-src="./videos/Níniach Edhil (Lament of the Eldar) - Lúthien Eärendilyon.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Níniach Edhil (Lament of the Eldar) - Lúthien Eärendilyon.mp4" style="cursor: pointer;">Lament of the Eldar</h4>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+			</div>
+			
+			<h3>December</h3>
+			
+			<div class="container three-column-section">
+				<div class="column">
+
+				</div>
+				
+				<div class="column">
+					<img src="./imgs/soul6.jpg" alt="Contours of Thought - Yori" class="trigger" data-video-src="./videos/Contour of Thoughts - Yori.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Contour of Thoughts - Yori.mp4" style="cursor: pointer;"></h4>
+				</div>
+
+				<div class="column">
+
+				</div>
+			</div>
+		</section>
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/kaia.png" alt="Sparkling Christmas Cheers - Kaia Diamonds" class="trigger" data-video-src="./videos/(Intro) Sparkling Christmas Cheers - Kaia Diamonds.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/(Intro) Sparkling Christmas Cheers - Kaia Diamonds.mp4" style="cursor: pointer;">Kaia Diamonds</h4>
+					<p>Kaia Diamonds is a gifted female singer who has made waves in the music industry with her soulful and captivating voice. Recently, she released a soul Christmas single that beautifully combines classic holiday themes with her unique sound. Her interpretation of Christmas songs brings a fresh and soulful perspective, blending heartfelt lyrics with rich vocal melodies.</p>
+
+					<p>In her music, Kaia Diamonds seamlessly merges elements of soul, R&B, and jazz, creating a distinctive style that appeals to listeners of all ages. Her ability to convey deep emotions through her singing has earned her praises. As she continues to release new music, Kaia Diamondsremains committed to using her talent to spread joy and inspire others during the holiday season and beyond.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/irishall2.png" alt="Glow of Christmas - Iris Hall" class="trigger" data-video-src="./videos/(Intro) Glow of Christmas - Iris Hall.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/(Intro) Glow of Christmas - Iris Hall.mp4" style="cursor: pointer;">Iris Hall</h4>
+					<p>Iris Hall is a talented black female singer renowned for her powerful vocals and exceptional ability to convey deep emotion through her music. With a voice that commands attention, Iris seamlessly blends soul, R&B, and gospel influences to create a sound that is both timeless and fresh. Her performances are captivating, drawing audiences in with her dynamic stage presence and passionate delivery. Iris's commitment to her craft is evident in every note she sings, making her a standout talent.</p>
+
+					<p>Recently, Iris Hall has made waves with the release of her soul Christmas single, which beautifully marries traditional holiday spirit with her modern, soulful interpretation. Her rendition of classic festive tunes showcases her vocal versatility and ability to breathe new life into beloved melodies. As she continues to share her remarkable voice with the world, Iris Hall's star is on the rise, promising an exciting journey ahead for both her and her growing fanbase.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/Spirit of Christmas - Janelle Winters.jpg" alt="Spirit of Christmas - Janelle Winters" class="trigger" data-video-src="./videos/(Intro) Spirit of Christmas - Janelle Winters.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/(Intro) Spirit of Christmas - Janelle Winters.mp4" style="cursor: pointer;">Janelle Winters</h4>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+			</div>
+
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/Starlight Festivities - Lila Banks.jpg" alt="Starlight Festivities - Lila Banks" class="trigger" data-video-src="./videos/Starlight Festivities - Lila Banks.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Starlight Festivities - Lila Banks.mp4" style="cursor: pointer;">Laila Banks</h4>
+					<p>Kaia Diamonds is a gifted female singer who has made waves in the music industry with her soulful and captivating voice. Recently, she released a soul Christmas single that beautifully combines classic holiday themes with her unique sound. Her interpretation of Christmas songs brings a fresh and soulful perspective, blending heartfelt lyrics with rich vocal melodies.</p>
+
+					<p>In her music, Kaia Diamonds seamlessly merges elements of soul, R&B, and jazz, creating a distinctive style that appeals to listeners of all ages. Her ability to convey deep emotions through her singing has earned her praises. As she continues to release new music, Kaia Diamondsremains committed to using her talent to spread joy and inspire others during the holiday season and beyond.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/Tiana Wells.jpg" alt="Spirits High - Tiana Wells" class="trigger" data-video-src="./videos/Spirits High - Tiana Wells.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Spirits High - Tiana Wells.mp4" style="cursor: pointer;">Tiana Wells</h4>
+					<p>Iris Hall is a talented black female singer renowned for her powerful vocals and exceptional ability to convey deep emotion through her music. With a voice that commands attention, Iris seamlessly blends soul, R&B, and gospel influences to create a sound that is both timeless and fresh. Her performances are captivating, drawing audiences in with her dynamic stage presence and passionate delivery. Iris's commitment to her craft is evident in every note she sings, making her a standout talent.</p>
+
+					<p>Recently, Iris Hall has made waves with the release of her soul Christmas single, which beautifully marries traditional holiday spirit with her modern, soulful interpretation. Her rendition of classic festive tunes showcases her vocal versatility and ability to breathe new life into beloved melodies. As she continues to share her remarkable voice with the world, Iris Hall's star is on the rise, promising an exciting journey ahead for both her and her growing fanbase.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/Warmth of Christmas - Fanny Brown.png" alt="Warmth of Christmas - Fanny Brown" class="trigger" data-video-src="./videos/Warmth of Christmas - Fanny Brown.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Warmth of Christmas - Fanny Brown.mp4" style="cursor: pointer;">Tamara Brown</h4>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+			</div>
+
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/Come Along to Christmas - Lauryn Knight.png" alt="Come Along to Christmas - Lauryn Knight" class="trigger" data-video-src="./videos/Come Along to Christmas - Lauryn Knight.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Come Along to Christmas - Lauryn Knight.mp4" style="cursor: pointer;">Lauryn Knight</h4>
+					<p>Kaia Diamonds is a gifted female singer who has made waves in the music industry with her soulful and captivating voice. Recently, she released a soul Christmas single that beautifully combines classic holiday themes with her unique sound. Her interpretation of Christmas songs brings a fresh and soulful perspective, blending heartfelt lyrics with rich vocal melodies.</p>
+
+					<p>In her music, Kaia Diamonds seamlessly merges elements of soul, R&B, and jazz, creating a distinctive style that appeals to listeners of all ages. Her ability to convey deep emotions through her singing has earned her praises. As she continues to release new music, Kaia Diamondsremains committed to using her talent to spread joy and inspire others during the holiday season and beyond.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/Talia Reese.png" alt="Christmas, We're Flying - Talia Reese" class="trigger" data-video-src="./videos/Christmas, We're Flying - Talia Reese.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Christmas, We're Flying - Talia Reese.mp4" style="cursor: pointer;">Talia Reese</h4>
+					<p>Iris Hall is a talented black female singer renowned for her powerful vocals and exceptional ability to convey deep emotion through her music. With a voice that commands attention, Iris seamlessly blends soul, R&B, and gospel influences to create a sound that is both timeless and fresh. Her performances are captivating, drawing audiences in with her dynamic stage presence and passionate delivery. Iris's commitment to her craft is evident in every note she sings, making her a standout talent.</p>
+
+					<p>Recently, Iris Hall has made waves with the release of her soul Christmas single, which beautifully marries traditional holiday spirit with her modern, soulful interpretation. Her rendition of classic festive tunes showcases her vocal versatility and ability to breathe new life into beloved melodies. As she continues to share her remarkable voice with the world, Iris Hall's star is on the rise, promising an exciting journey ahead for both her and her growing fanbase.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/Light the Tree - Keshyira.png" alt="Light the Tree - Keshyira" class="trigger" data-video-src="./videos/Light the Tree - Keshyira.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Light the Tree - Keshyira.mp4" style="cursor: pointer;">Keshyira</h4>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+			</div>
+			
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/yori.jpg" alt="Contours of Thought - Yori" class="trigger" data-video-src="./videos/Contour of Thoughts - Yori.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Contour of Thoughts - Yori.mp4" style="cursor: pointer;">Yori</h4>
+					<p>Kaia Diamonds is a gifted female singer who has made waves in the music industry with her soulful and captivating voice. Recently, she released a soul Christmas single that beautifully combines classic holiday themes with her unique sound. Her interpretation of Christmas songs brings a fresh and soulful perspective, blending heartfelt lyrics with rich vocal melodies.</p>
+
+					<p>In her music, Kaia Diamonds seamlessly merges elements of soul, R&B, and jazz, creating a distinctive style that appeals to listeners of all ages. Her ability to convey deep emotions through her singing has earned her praises. As she continues to release new music, Kaia Diamondsremains committed to using her talent to spread joy and inspire others during the holiday season and beyond.</p>
+				</div>
+				
+				<div class="column">
+					<img src="./imgs/avery-blue.png" alt="My Winter's Song for You - Avery Blue" class="trigger" data-video-src="./videos/(Intro) My Winter's Song for You - Avery Blue.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/(Intro) My Winter's Song for You - Avery Blue.mp4" style="cursor: pointer;">Avery Blue</h4>
+					<p>Kaia Diamonds is a gifted female singer who has made waves in the music industry with her soulful and captivating voice. Recently, she released a soul Christmas single that beautifully combines classic holiday themes with her unique sound. Her interpretation of Christmas songs brings a fresh and soulful perspective, blending heartfelt lyrics with rich vocal melodies.</p>
+
+					<p>In her music, Kaia Diamonds seamlessly merges elements of soul, R&B, and jazz, creating a distinctive style that appeals to listeners of all ages. Her ability to convey deep emotions through her singing has earned her praises. As she continues to release new music, Kaia Diamondsremains committed to using her talent to spread joy and inspire others during the holiday season and beyond.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/We Will Always Be Stars.png" alt="We Will Always Be Stars - Ruby Wise" class="trigger" data-video-src="./videos/We Will Always Be Stars - Ruby Wise.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/We Will Always Be Stars - Ruby Wise.mp4" style="cursor: pointer;">Ruby Wise</h4>
+					<p>Iris Hall is a talented black female singer renowned for her powerful vocals and exceptional ability to convey deep emotion through her music. With a voice that commands attention, Iris seamlessly blends soul, R&B, and gospel influences to create a sound that is both timeless and fresh. Her performances are captivating, drawing audiences in with her dynamic stage presence and passionate delivery. Iris's commitment to her craft is evident in every note she sings, making her a standout talent.</p>
+
+					<p>Recently, Iris Hall has made waves with the release of her soul Christmas single, which beautifully marries traditional holiday spirit with her modern, soulful interpretation. Her rendition of classic festive tunes showcases her vocal versatility and ability to breathe new life into beloved melodies. As she continues to share her remarkable voice with the world, Iris Hall's star is on the rise, promising an exciting journey ahead for both her and her growing fanbase.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/Mundo Illuminado - Estrella Flores.png" alt="Mundo Illuminado - Estrella Flores" class="trigger" data-video-src="./videos/Mundo Illuminado - Estrella Flores.mp4" style="cursor: pointer;">
+					<h4 class="trigger" data-video-src="./videos/Mundo Illuminado - Estrella Flores.mp4" style="cursor: pointer;">Estrella Flores</h4>
+					<p>Elarion Arandë is a singer known for her ethereal and enchanting music. Her celestial voice and mastery of traditional elven instruments, such as the lyre and harp, transport audiences to a world of magic and wonder. Elarion's music is deeply inspired by the natural world, drawing from the serenity of whispering leaves and the starlit skies. Her songs often tell tales of legendary heroes, epic quests, and the timeless wisdom of her ancestors, weaving a captivating narrative that resonates with listeners of all backgrounds.</p>
+
+					<p>Elarion uses her platform to promote conservation efforts and the protection of natural landscapes. Her performances are known for their immersive quality, leaving audiences spellbound and fostering a sense of peace and tranquility. Elarion Arandë's artistry transcends borders, enchanting audiences with her timeless and otherworldly music. Her gentle and melodic sound continues to inspire and uplift, making her a beloved figure.</p>
+				</div>
+			</div-->
 		</section>
 
     </div> <!-- End main-content div -->
+	
+	<!-- Popup div that contains the YouTube video -->
+	<div id="popup" class="popup">
+	  <div class="popup-content">
+		<iframe id="youtubeVideo" frameborder="0" allow="autoplay; fullscreen; encrypted-media; gyroscope" style="display: none;"></iframe>
+		<video id="localVideo" controls loop style="display: none;"></video>
+	  </div>
+	</div>
 	
 
     <div class="footer-image">
@@ -393,8 +801,8 @@
 	<footer>
 		<div class="footer-links">
 			<div class="footer-column social-icons">
+				<a href="https://twitter.com/StarnogenMusic" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
 				<a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
 				<a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
 				<a href="#" target="_blank" title="Soundcloud"><i class="fab fa-soundcloud"></i></a>
 			</div>
@@ -415,6 +823,102 @@
     <!-- Font Awesome icons (you can include this in your project or use a CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+	<script>
+		// Get elements
+		const triggers = document.querySelectorAll('.trigger');
+		const popup = document.getElementById('popup');
+		const popupContent = document.querySelector('.popup-content');
+		const youtubeVideo = document.getElementById('youtubeVideo');
+		const localVideo = document.getElementById('localVideo');
 
+		// Function to calculate and set popup dimensions
+		function setPopupDimensions() {
+		  // Get screen width and height
+		  const screenWidth = window.innerWidth;
+		  const screenHeight = window.innerHeight;
+
+		  if (screenWidth > screenHeight) {
+			// Width is greater than height
+			const popupHeight = screenHeight * 0.7; // 70% of screen height
+			popupContent.style.height = `${popupHeight}px`;
+			popupContent.style.width = `${popupHeight}px`; // Set width same as height to make it square
+		  } else {
+			// Height is greater than or equal to width
+			const popupWidth = screenWidth * 0.7; // 70% of screen width
+			popupContent.style.width = `${popupWidth}px`;
+			popupContent.style.height = `${popupWidth}px`; // Set height same as width to make it square
+		  }
+
+		  // Center the popup content on the screen
+		  popupContent.style.top = '50%';
+		  popupContent.style.left = '50%';
+		  popupContent.style.transform = 'translate(-50%, -50%)';
+		}
+
+		// Function to determine whether the video source is a YouTube link
+		function isYouTubeURL(videoSrc) {
+		  return videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be');
+		}
+
+		// Function to open the popup and play the video
+		function openPopup(event) {
+		  // Set popup dimensions
+		  setPopupDimensions();
+		
+		  // Get the video source from the clicked element's data attribute
+		  const videoSrc = event.currentTarget.dataset.videoSrc;
+
+		  // Check whether the video source is a YouTube URL
+		  if (isYouTubeURL(videoSrc)) {
+			// If YouTube URL, set iframe src and display the iframe
+			youtubeVideo.src = videoSrc.replace('watch?v=', 'embed/') + '?autoplay=1';
+			youtubeVideo.style.display = 'block';
+			localVideo.style.display = 'none';
+		  } else {
+			// If local video file, set video src and display the video element
+			localVideo.src = videoSrc;
+			localVideo.style.display = 'block';
+			youtubeVideo.style.display = 'none';
+			// Play the local video
+			localVideo.play();
+		  }
+
+		  // Display the popup
+		  popup.style.display = 'block';
+		}
+
+		// Function to close the popup and stop the video
+		function closePopup() {
+		  // Hide the popup
+		  popup.style.display = 'none';
+
+		  // Hide both video elements
+		  youtubeVideo.style.display = 'none';
+		  localVideo.style.display = 'none';
+
+		  // Reset and stop YouTube video
+		  youtubeVideo.src = ''; // This resets the YouTube video
+
+		  // Pause the local video and reset its current time
+		  localVideo.pause();
+		  localVideo.currentTime = 0;
+		}
+		
+		// Add event listeners to all trigger elements
+		triggers.forEach(trigger => {
+		  trigger.addEventListener('click', openPopup);
+		});
+
+		// Add event listener to the entire popup to handle closing when clicking outside the popup content
+		popup.addEventListener('click', function(event) {
+		  // Close the popup if the click occurred outside the popup content (but still within the popup)
+		  if (event.target === popup) {
+			closePopup();
+		  }
+		});
+
+		// Optionally, handle popup dimension updates on window resize
+		window.addEventListener('resize', setPopupDimensions);
+	</script>
 </body>
 </html>
